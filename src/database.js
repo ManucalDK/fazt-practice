@@ -9,6 +9,10 @@ pool.on('error', (err, client) => {
     process.exit(-1)
 })
 
+pool.on('connect', () => {
+    console.log('DB Conectada')
+})
+
 promisify(pool.query)
 
 module.exports = pool

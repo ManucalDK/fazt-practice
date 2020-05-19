@@ -33,7 +33,7 @@ app.use((req, res, next)=>{
 
 //routes
 app.use(require('./routes/index.js'))
-app.use(require('./routes/auth.js'))
+app.use('/usuarios' , require('./routes/auth.js'))
 app.use('/links', require('./routes/links.js'))
 
 //public
